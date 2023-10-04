@@ -1,9 +1,11 @@
 :root {
-    --main-color: #020617;
-    --second-color: #0f172a;
-    --third-color: #334155;
+    --main-color: #1d2a67;
+    --second-color: #00174d;
+    --third-color: #1a1c3d;
     --bg-color: #f8fafc;
     background-color: var(--bg-color);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif sans-serif;
+    font-size: 20px;
 }
 *{
     /*border: 1px solid rgb(117, 0, 0);*/
@@ -28,8 +30,53 @@ body{
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background-color: var(--third-color);
+    color: var(--bg-color);
+    padding: 1rem;
 }
-
+.input{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+.input input{
+    border-radius: 10px;
+    flex: 1;
+    height: 1rem;
+}
+.input img{
+    height: 2rem;
+}
+.account img, 
+.user img{
+    filter: none;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+}
+.account, .user{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: stretch;
+}
+.header-menu{
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+}
+.header-menu button{
+    width: 5rem;
+    height: 3rem;
+    color: white;
+    background-color: var(--main-color);
+    font-weight: 800;
+    border-radius: 12%;
+    border: none;
+    padding: 1rem;
+}
 .sidebar {
     color: var(--bg-color);
     position:sticky;
@@ -45,6 +92,34 @@ body{
     list-style: none;
     padding: 0px;
 }
+img{
+    filter: invert(100%);
+}
+.logo {
+    font-weight: 900;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 1.3rem;
+}
+.logo .cloud{
+    min-height: 120px;
+}
+.menu-bar ul li img {
+    height: 1.6rem;
+}
+.menu-bar ul{
+    display: grid;
+    gap: .5rem;
+}
+.menu-bar ul li {
+    padding-left: 1.5rem;
+    display: flex;
+    gap: .8rem;
+    align-items: end;
+    font-weight: 700;
+    justify-content: flex-start;
+}
 
 .container {
     background-color: var(--bg-color);
@@ -57,17 +132,23 @@ body{
     height: auto;
     padding: 5px 20px;
     display: grid;
-    gap: 10px;
+    gap: 18px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    box-shadow: inset;
+    box-shadow: 0 4px 20px var(--third-color);
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .projects div {
     height: max(200px, 30vh);
     border-radius: 10px;
+    border: 2px solid var(--second-color);
+    display: grid;
+    justify-content: center;
 }
 .one{
-    
+    font-weight: 800;
+    align-items: center;
 }
 .two{
     
@@ -80,4 +161,5 @@ body{
     display: grid;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
 }
